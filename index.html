@@ -3,33 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Mi Primera Web</title>
-
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #0f172a;
-        color: white;
-        text-align: center;
-        padding: 50px;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      button {
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #22c55e;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: #16a34a;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Hola, soy Fabián 👋</h1>
@@ -37,15 +11,6 @@
       Estoy aprendiendo desarrollo web y este es mi primer proyecto.
     </p>
     <button id="btnSaludo">Haz clic</button>
-
-    <script>
-      const boton = document.getElementById("btnSaludo");
-
-      boton.addEventListener("click", function () {
-        const mensaje = document.getElementById("mensaje");
-        mensaje.textContent = "🔥 Ahora usas addEventListener como un pro";
-        mensaje.style.color = "yellow";
-      });
-    </script>
   </body>
+  <script src="script.js"></script>
 </html>
