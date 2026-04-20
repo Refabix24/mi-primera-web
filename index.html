@@ -1,49 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Mi Primera Web</title>
-    
+
     <style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0f172a;
-    color: white;
-    text-align: center;
-    padding: 50px;
-}
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #0f172a;
+        color: white;
+        text-align: center;
+        padding: 50px;
+      }
 
-h1 {
-    font-size: 2.5rem;
-}
+      h1 {
+        font-size: 2.5rem;
+      }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #22c55e;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #22c55e;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
 
-button:hover {
-    background-color: #16a34a;
-}
-</style>
-
-</head>
-<body>
-
+      button:hover {
+        background-color: #16a34a;
+      }
+    </style>
+  </head>
+  <body>
     <h1>Hola, soy Fabián 👋</h1>
-    <p>Estoy aprendiendo desarrollo web y este es mi primer proyecto.</p>
-
-    <button onclick="saludar()">Haz clic</button>
+    <p id="mensaje">
+      Estoy aprendiendo desarrollo web y este es mi primer proyecto.
+    </p>
+    <button id="btnSaludo">Haz clic</button>
 
     <script>
-        function saludar() {
-            alert("Hola Fabián, este botón ya funciona 🔥");
-        }
-    </script>
+      const boton = document.getElementById("btnSaludo");
 
-</body>
+      boton.addEventListener("click", function () {
+        const mensaje = document.getElementById("mensaje");
+        mensaje.textContent = "🔥 Ahora usas addEventListener como un pro";
+        mensaje.style.color = "yellow";
+      });
+    </script>
+  </body>
 </html>
